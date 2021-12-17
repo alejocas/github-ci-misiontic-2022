@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 8.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -22,7 +22,7 @@ jobs:
     - name: yarn install
       run: |
         yarn install
-    - name: npm test
+    - name: yarn test
       run: |
         yarn test
       env:
